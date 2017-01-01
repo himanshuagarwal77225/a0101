@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        <title>Love Status</title>
+    </head>
+    <body>
+    <div data-role="page" id="main" class="app_main">
+  <section>
+    <div id="page_1" >
+      <div data-role="header" class="header">
+      </div>
+      <div data-role="content"> 
+        <div class="p_r">
+          <div class="loading_content"><div class="loading_circle"> </div><div class="content_container"><div class="loader_content"><div class="content_inner">Loading something useful​</div> </div></div></div>                
+		</div> 
+    </div>
+    </div>
+    </section>
+</div>
+<style>
+.topbgmobile { display: none;}
+body{margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;}
+html,body{height:100%; }
+.app_main {background:  url("img/app_bg.jpg")  scroll right bottom;font-size: 19px;height:100%;background-size:100% 100%;} 
+
+.loading_content{color:#000; font-size:14px;  position:absolute; text-align:center; left:0; right:0; top:55%; margin:auto; font-weight:normal; }
+/*Loading Amimation*/
+.loading_circle { background-color: rgba(80, 80, 80,.6);border: 5px solid #666;border-top: 5px solid #fff;border-left: 5px solid #fff;border-radius: 50%;width: 120px;height: 120px; margin: 0 auto;-moz-animation: spin 2s infinite linear;-webkit-animation: spin 2s infinite linear;} 
+.logo.text-center{margin-top:40px;} 
+#page_5 .logo.text-center{margin-top:25px;}#page_5 .loading_circle{margin-top:35px;} 
+.p_r{position:relative1;}
+.loader_content{position: absolute;top: 24%;color: #fff;font-size: 15px;text-transform: uppercase; width:100%;}
+.content_inner{width: 100px;margin: auto;font-weight: bold;}
+.wifi_msg p{position: fixed; bottom: 0;  text-align: center;color: #fff;font-size: 12px; background: rgba(0, 0, 0, 0);padding: 5px 0; margin:0;}
+@media(max-width:320px){
+.logo.text-center{margin-top:5px;}
+
+}
+@media(min-width:480px) and (max-width:767px){.logo.text-center{margin-top:5px; } .loading_circle{margin-top:8px;}}
+@media (max-width:767px){ 
+.topbgdesktop {display: none;}
+.topbgmobile {display: block;}
+}
+@media (min-width:768px){ 
+
+}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    } 
+    100% {
+        -moz-transform: rotate(360deg);
+    };
+} 
+@-moz-keyframes spinoff {
+    0% {
+        -moz-transform: rotate(0deg);
+    } 
+    100% {
+        -moz-transform: rotate(-360deg);
+    };
+} 
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
+} 
+@-webkit-keyframes spinoff {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 
+    100% {
+        -webkit-transform: rotate(-360deg);
+    };
+}
+</style>
+
+		<script type="text/javascript" src="js/ajax_library.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+			<script type="text/javascript">
+                document.addEventListener('deviceready', function() {
+                    var url = 'http://www.lovestatus.org' // change to whatever you want
+                    cordova.InAppBrowser.open(url, '_self', 'location=no,hidden=yes,zoom=no,toolbar=no,disallowoverscroll=yes');
+                }, false)
+            </script>
+    </body>
+</html>
