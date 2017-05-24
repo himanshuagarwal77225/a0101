@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var mainsitedomain = "lovestatus.org";
+var mainsitedomain = "solmate.in";
 var app_version="1.0.7";
-var baseUrl = "http://www.lovestatus.org";
+var baseUrl = "http://solmate.in/";
 var ref;
 var urlParam = "";
 
